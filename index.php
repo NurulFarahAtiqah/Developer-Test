@@ -34,9 +34,9 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
-$location_id = 00001
+$location_id = 00001;
 //table locations - id, user_id (int), district (varchar 255), state (varchar 255),country (varchar 255)
-$sql = "SELECT * FROM location WHERE location_id = $location_id"
+$sql = "SELECT * FROM location WHERE location_id = $location_id";
 
 $data = $conn->query($sql);
 
@@ -59,7 +59,7 @@ else {
        http_response_code(404);
     // tell the user no location found
  
-        array("message" => "No location found.")
+         echo json_encode(array("message" => "No location found."));
   
 }
 
@@ -69,7 +69,7 @@ else {
      http_response_code(401);
     // no user found
  
-        array("message" => "401 Unauthorized.")
+         echo json_encode(array("message" => "401 Unauthorized."));
    
 
 }
