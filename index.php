@@ -41,9 +41,9 @@ $sql = "SELECT * FROM location WHERE location_id = $location_id"
 $data = $conn->query($sql);
 
   while($row = $data->fetch_assoc()) {
-     = $row["location_district"];
-     = $row["location_state"];
-     = $row["location_country"];
+     = $row["district"];
+     = $row["state"];
+     = $row["country"];
   }
 
 
